@@ -4,9 +4,9 @@ import withReducer from 'app/store/withReducer';
 import React from 'react';
 import reducer from '../store/reducers';
 import CheckoutHeader from './CheckoutHeader';
-import CheckoutTable from './CheckoutTable';
+// import CheckoutTable from './CheckoutTable';
 import { useDispatch, useSelector } from 'react-redux';
-import { withRouter, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 // import OrdersStatus from '../order/OrdersStatus';
 import * as Actions from '../store/actions';
 import { useDeepCompareEffect } from '@fuse/hooks';
@@ -20,7 +20,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 
 function Checkout(props) {
 	const dispatch = useDispatch();

@@ -1,16 +1,17 @@
 import FuseAnimate from '@fuse/core/FuseAnimate';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import Input from '@material-ui/core/Input';
-import Paper from '@material-ui/core/Paper';
-import { ThemeProvider } from '@material-ui/core/styles';
+// import Input from '@material-ui/core/Input';
+// import Paper from '@material-ui/core/Paper';
+// import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import * as Actions from '../store/actions';
+// import { useDispatch, useSelector } from 'react-redux';
+// import * as Actions from '../store/actions';
 import { useTheme } from '@material-ui/core/styles';
-import _ from '@lodash';
-import { Link, useParams } from 'react-router-dom';
+// import _ from '@lodash';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function CheckoutHeader(props) {
 	// const dispatch = useDispatch();

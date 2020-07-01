@@ -8,7 +8,7 @@ import * as Actions from 'app/store/actions';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -53,7 +53,7 @@ function FuseNavVerticalItem(props) {
 	const classes = useStyles({
 		itemPadding: nestedLevel > 0 ? 40 + nestedLevel * 16 : 24
 	});
-	const { t } = useTranslation('navigation');
+	// const { t } = useTranslation('navigation');
 
 	const hasPermission = useMemo(() => FuseUtils.hasPermission(item.auth, userRole), [item.auth, userRole]);
 
@@ -79,7 +79,7 @@ function FuseNavVerticalItem(props) {
 
 			<ListItemText
 				className="list-item-text"
-				primary={item.translate ? t(item.translate) : item.title}
+				primary={item.title}
 				classes={{ primary: 'text-14 list-item-text-primary' }}
 			/>
 
