@@ -31,6 +31,19 @@ function Marker(props) {
 }
 
 function Order(props) {
+	// const [orders, setOrders] = useState([]);
+	// let fetchOrders = () => {
+	// 	fetch('http://localhost:3001/api/e-commerce-app/orders')
+	// 		.then(response => response.json())
+	// 		.then(result => {
+	// 		setOrders(result);
+	// 		});
+	// };
+
+	// useEffect(() => {
+	// 	fetchOrders();
+	// }, []);
+
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
 	const theme = useTheme();
@@ -41,6 +54,7 @@ function Order(props) {
 
 	useDeepCompareEffect(() => {
 		dispatch(Actions.getOrder(routeParams));
+		console.log(routeParams);
 	}, [dispatch, routeParams]);
 
 	function handleChangeTab(event, value) {
@@ -79,11 +93,11 @@ function Order(props) {
 									</Typography>
 								</FuseAnimate>
 
-								<FuseAnimate animation="transition.slideLeftIn" delay={300}>
+								{/* <FuseAnimate animation="transition.slideLeftIn" delay={300}>
 									<Typography variant="caption">
 										{`From ${order.customer.firstName} ${order.customer.lastName}`}
 									</Typography>
-								</FuseAnimate>
+								</FuseAnimate> */}
 							</div>
 						</div>
 					</div>
@@ -131,15 +145,15 @@ function Order(props) {
 												</thead>
 												<tbody>
 													<tr>
-														<td>
+														{/* <td>
 															<div className="flex items-center">
 																<Avatar src={order.customer.avatar} />
 																<Typography className="truncate mx-8">
 																	{`${order.customer.firstName} ${order.customer.lastName}`}
 																</Typography>
 															</div>
-														</td>
-														<td>
+														</td> */}
+														{/* <td>
 															<Typography className="truncate">
 																{order.customer.email}
 															</Typography>
@@ -151,7 +165,7 @@ function Order(props) {
 														</td>
 														<td>
 															<span className="truncate">{order.customer.company}</span>
-														</td>
+														</td> */}
 													</tr>
 												</tbody>
 											</table>
@@ -165,7 +179,7 @@ function Order(props) {
 											<ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 												<Typography className="font-600">Shipping Address</Typography>
 											</ExpansionPanelSummary>
-											<ExpansionPanelDetails className="flex flex-col md:flex-row">
+											{/* <ExpansionPanelDetails className="flex flex-col md:flex-row">
 												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.shippingAddress.address}
 												</Typography>
@@ -187,7 +201,7 @@ function Order(props) {
 														/>
 													</GoogleMap>
 												</div>
-											</ExpansionPanelDetails>
+											</ExpansionPanelDetails> */}
 										</ExpansionPanel>
 
 										<ExpansionPanel
@@ -199,7 +213,7 @@ function Order(props) {
 												<Typography className="font-600">Invoice Address</Typography>
 											</ExpansionPanelSummary>
 											<ExpansionPanelDetails className="flex flex-col md:flex-row">
-												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
+												{/* <Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.invoiceAddress.address}
 												</Typography>
 												<div className="w-full h-320">
@@ -219,7 +233,7 @@ function Order(props) {
 															lng={order.customer.invoiceAddress.lng}
 														/>
 													</GoogleMap>
-												</div>
+												</div> */}
 											</ExpansionPanelDetails>
 										</ExpansionPanel>
 									</div>
@@ -241,7 +255,7 @@ function Order(props) {
 													<th>Updated On</th>
 												</tr>
 											</thead>
-											<tbody>
+											{/* <tbody>
 												{order.status.map(status => (
 													<tr key={status.id}>
 														<td>
@@ -250,7 +264,7 @@ function Order(props) {
 														<td>{status.date}</td>
 													</tr>
 												))}
-											</tbody>
+											</tbody> */}
 										</table>
 									</div>
 								</div>
@@ -275,7 +289,7 @@ function Order(props) {
 											</thead>
 											<tbody>
 												<tr>
-													<td>
+													{/* <td>
 														<span className="truncate">{order.payment.transactionId}</span>
 													</td>
 													<td>
@@ -286,7 +300,7 @@ function Order(props) {
 													</td>
 													<td>
 														<span className="truncate">{order.payment.date}</span>
-													</td>
+													</td> */}
 												</tr>
 											</tbody>
 										</table>
@@ -313,7 +327,7 @@ function Order(props) {
 												</tr>
 											</thead>
 											<tbody>
-												{order.shippingDetails.map(shipping => (
+												{/* {order.shippingDetails.map(shipping => (
 													<tr key={shipping.date}>
 														<td>
 															<span className="truncate">{shipping.tracking}</span>
@@ -331,7 +345,7 @@ function Order(props) {
 															<span className="truncate">{shipping.date}</span>
 														</td>
 													</tr>
-												))}
+												))} */}
 											</tbody>
 										</table>
 									</div>
@@ -352,7 +366,7 @@ function Order(props) {
 										</tr>
 									</thead>
 									<tbody>
-										{order.products.map(product => (
+										{/* {order.products.map(product => (
 											<tr key={product.id}>
 												<td className="w-64">{product.id}</td>
 												<td className="w-80">
@@ -378,13 +392,13 @@ function Order(props) {
 													<span className="truncate">{product.quantity}</span>
 												</td>
 											</tr>
-										))}
+										))} */}
 									</tbody>
 								</table>
 							</div>
 						)}
 						{/* Invoice */}
-						{tabValue === 2 && <OrderInvoice order={order} />}
+						{/* {tabValue === 2 && <OrderInvoice order={order} />} */}
 					</div>
 				)
 			}

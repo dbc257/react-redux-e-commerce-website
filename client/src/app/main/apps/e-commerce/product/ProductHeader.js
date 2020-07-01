@@ -9,7 +9,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 // import * as Actions from '../store/actions';
 import { useTheme } from '@material-ui/core/styles';
-import _ from '@lodash';
+// import _ from '@lodash';
 import { Link } from 'react-router-dom';
 
 function ProductHeader(props) {
@@ -37,11 +37,7 @@ function ProductHeader(props) {
 				<div className="flex items-center max-w-full">
 					<FuseAnimate animation="transition.expandIn" delay={300}>
 						{product.data != null ? (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src={_.find(product.data.images, { id: product.data.featuredImageId }).url}
-								alt={product.data.name}
-							/>
+							<img className="w-32 sm:w-48 rounded" src={product.data.image} alt={product.data.name} />
 						) : (
 							<img
 								className="w-32 sm:w-48 rounded"

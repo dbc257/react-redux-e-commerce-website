@@ -1,5 +1,3 @@
-// import _ from '@lodash';
-// import mock from '../mock';
 let express = require("express");
 let router = express.Router();
 const bodyParser = require("body-parser");
@@ -16,58 +14,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 1,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
       priceTaxExcl: 9.309,
       priceTaxIncl: 10.24,
       taxRate: 10,
@@ -90,58 +37,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 2,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/braies-lake.jpg",
       priceTaxExcl: 22.381,
       priceTaxIncl: 24.62,
       taxRate: 10,
@@ -164,58 +60,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 3,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/fall-glow.jpg",
       priceTaxExcl: 44.809,
       priceTaxIncl: 49.29,
       taxRate: 10,
@@ -238,58 +83,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 4,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/first-snow.jpg",
       priceTaxExcl: 62.827,
       priceTaxIncl: 69.11,
       taxRate: 10,
@@ -312,58 +106,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 5,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/lago-di-braies.jpg",
       priceTaxExcl: 9.309,
       priceTaxIncl: 10.24,
       taxRate: 10,
@@ -386,58 +129,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 6,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/lago-di-sorapis.jpg",
       priceTaxExcl: 53.963,
       priceTaxIncl: 59.36,
       taxRate: 10,
@@ -460,58 +152,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 7,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/never-stop-changing.jpg",
       priceTaxExcl: 58.372,
       priceTaxIncl: 64.21,
       taxRate: 10,
@@ -534,58 +175,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 8,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/reaching.jpg",
       priceTaxExcl: 63.39,
       priceTaxIncl: 69.73,
       taxRate: 10,
@@ -608,58 +198,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 9,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/morain-lake.jpg",
       priceTaxExcl: 52.154,
       priceTaxIncl: 57.37,
       taxRate: 10,
@@ -682,58 +221,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 9,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/yosemite.jpg",
       priceTaxExcl: 62.18,
       priceTaxIncl: 68.4,
       taxRate: 10,
@@ -756,58 +244,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 1,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
       priceTaxExcl: 9.309,
       priceTaxIncl: 10.24,
       taxRate: 10,
@@ -830,58 +267,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 7,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/never-stop-changing.jpg",
       priceTaxExcl: 58.372,
       priceTaxIncl: 64.21,
       taxRate: 10,
@@ -904,58 +290,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 9,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/morain-lake.jpg",
       priceTaxExcl: 52.154,
       priceTaxIncl: 57.37,
       taxRate: 10,
@@ -978,58 +313,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 2,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/braies-lake.jpg",
       priceTaxExcl: 22.381,
       priceTaxIncl: 24.62,
       taxRate: 10,
@@ -1052,58 +336,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 5,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/lago-di-braies.jpg",
       priceTaxExcl: 9.309,
       priceTaxIncl: 10.24,
       taxRate: 10,
@@ -1126,58 +359,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 3,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/fall-glow.jpg",
       priceTaxExcl: 44.809,
       priceTaxIncl: 49.29,
       taxRate: 10,
@@ -1200,58 +382,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 6,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/lago-di-sorapis.jpg",
       priceTaxExcl: 53.963,
       priceTaxIncl: 59.36,
       taxRate: 10,
@@ -1274,58 +405,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 8,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/reaching.jpg",
       priceTaxExcl: 63.39,
       priceTaxIncl: 69.73,
       taxRate: 10,
@@ -1348,58 +428,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 4,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/first-snow.jpg",
       priceTaxExcl: 62.827,
       priceTaxIncl: 69.11,
       taxRate: 10,
@@ -1422,58 +451,7 @@ const eCommerceDB = {
       categories: ["Canvas Print", "Nature"],
       tags: ["canvas-print", "nature"],
       featuredImageId: 9,
-      images: [
-        {
-          id: 0,
-          url: "assets/images/ecommerce/a-walk-amongst-friends.jpg",
-          type: "image",
-        },
-        {
-          id: 1,
-          url: "assets/images/ecommerce/braies-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 2,
-          url: "assets/images/ecommerce/fall-glow.jpg",
-          type: "image",
-        },
-        {
-          id: 3,
-          url: "assets/images/ecommerce/first-snow.jpg",
-          type: "image",
-        },
-        {
-          id: 4,
-          url: "assets/images/ecommerce/lago-di-braies.jpg",
-          type: "image",
-        },
-        {
-          id: 5,
-          url: "assets/images/ecommerce/lago-di-sorapis.jpg",
-          type: "image",
-        },
-        {
-          id: 6,
-          url: "assets/images/ecommerce/never-stop-changing.jpg",
-          type: "image",
-        },
-        {
-          id: 7,
-          url: "assets/images/ecommerce/reaching.jpg",
-          type: "image",
-        },
-        {
-          id: 8,
-          url: "assets/images/ecommerce/morain-lake.jpg",
-          type: "image",
-        },
-        {
-          id: 9,
-          url: "assets/images/ecommerce/yosemite.jpg",
-          type: "image",
-        },
-      ],
+      image: "assets/images/ecommerce/yosemite.jpg",
       priceTaxExcl: 62.18,
       priceTaxIncl: 68.4,
       taxRate: 10,
@@ -3180,39 +2158,41 @@ router.get("/e-commerce-app/products", (req, res) => {
   res.json(eCommerceDB.products);
 });
 
-router.get("/e-commerce-app/product/:productId", (req, res) => {
+router.get("/e-commerce-app/product/:productId/:productHandle?", (req, res) => {
   const productId = req.params.productId;
   const response = eCommerceDB.products.find((p) => p.id === productId);
   res.json(response);
 });
 
-// router.post("/api/e-commerce-app/product/save", (req, res) => {
-//   const data = JSON.parse(req.data);
-//   let product = null;
+router.post("/api/e-commerce-app/product/save", (req, res) => {
+  const data = JSON.parse(req.data);
+  console.log(req.data);
+  let product = null;
 
-//   eCommerceDB.products = eCommerceDB.products.map((product) => {
-//     if (product.id === data.id) {
-//       product = data;
-//       return product;
-//     }
-//     return _product;
-//   });
+  eCommerceDB.products = eCommerceDB.products.map((product) => {
+    if (product.id === data.id) {
+      product = data;
+      return product;
+    }
+    res.json(product);
+  });
 
-//   if (!product) {
-//     product = data;
-//     eCommerceDB.products = [...eCommerceDB.products, product];
-//   }
+  if (!product) {
+    product = data;
+    eCommerceDB.products = [...eCommerceDB.products, product];
+  }
 
-//   return [200, product];
-// });
+  res.json(product);
+});
 
-router.get("/api/e-commerce-app/orders", (req, res) => {
+router.get("/e-commerce-app/orders", (req, res) => {
+  // console.log(eCommerceDB.orders)
   res.json(eCommerceDB.orders);
 });
 
-router.get("/api/e-commerce-app/order:orderId", (req, res) => {
-  const { orderId } = request.params.orderId;
-  const response = eCommerceDB.products.find((o) => o.id === orderId);
+router.get("/e-commerce-app/order/:orderId", (req, res) => {
+  const orderId = req.params.orderId;
+  const response = eCommerceDB.orders.find((o) => o.id === orderId);
   res.json(response);
 });
 module.exports = router;

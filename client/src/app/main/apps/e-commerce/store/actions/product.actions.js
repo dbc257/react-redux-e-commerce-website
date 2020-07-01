@@ -6,7 +6,8 @@ export const GET_PRODUCT = '[E-COMMERCE APP] GET PRODUCT';
 export const SAVE_PRODUCT = '[E-COMMERCE APP] SAVE PRODUCT';
 
 export function getProduct(params) {
-	const request = axios.get('/api/e-commerce-app/product', { params });
+	const request = axios.get(`http://localhost:3001/api/e-commerce-app/product/${params.productId}`);
+	// const request = axios.get('/api/e-commerce-app/product', { params });
 
 	return dispatch =>
 		request.then(response =>
@@ -19,7 +20,8 @@ export function getProduct(params) {
 
 export function saveProduct(data) {
 	const request = axios.post('/api/e-commerce-app/product/save', data);
-
+	// const request = axios.post('http://localhost:3001/api/e-commerce-app/product/save', data);
+	console.log(data);
 	return dispatch =>
 		request.then(response => {
 			dispatch(showMessage({ message: 'Product Saved' }));

@@ -1,7 +1,7 @@
 import FusePageSimple from '@fuse/core/FusePageSimple';
 // import FusePageCarded from '@fuse/core/FusePageCarded';
 import withReducer from 'app/store/withReducer';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import reducer from '../store/reducers';
 import CartHeader from './CartHeader';
 // import CheckoutTable from './CheckoutTable';
@@ -23,9 +23,24 @@ import { Link, useParams } from 'react-router-dom';
 // import clsx from 'clsx';
 
 function Cart(props) {
+	const routeParams = useParams();
+	// const [order, setOrder] = useState([]);
+	// let fetchOrder = () => {
+	// 	fetch(`http://localhost:3001/api/e-commerce-app/orders/${routeParams}`)
+	// 		.then(response => response.json())
+	// 		.then(result => {
+	// 			console.log(result);
+	// 			setOrder(result);
+	// 		});
+	// };
+
+	// useEffect(() => {
+	// 	fetchOrder();
+	// }, []);
+
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
-	const routeParams = useParams();
+
 	// const [tabValue, setTabValue] = useState(0);
 	// const [map, setMap] = useState('shipping');
 
