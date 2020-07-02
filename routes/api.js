@@ -3190,7 +3190,7 @@ const eCommerceDB = {
   ],
 };
 
-router.get("/", (req, res) => {
+router.get("/api/json", (req, res) => {
   res.json(eCommerceDB);
 });
 
