@@ -10,22 +10,37 @@ import { useDispatch, useSelector } from 'react-redux';
 // import OrdersStatus from '../order/OrdersStatus';
 import * as Actions from '../store/actions';
 import { useDeepCompareEffect } from '@fuse/hooks';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
+// import Table from '@material-ui/core/Table';
+// import TableBody from '@material-ui/core/TableBody';
+// import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 // import CheckoutTableHead from './CheckoutTableHead';
 import { Link, useParams } from 'react-router-dom';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import clsx from 'clsx';
+// import TableHead from '@material-ui/core/TableHead';
+// import TableRow from '@material-ui/core/TableRow';
+// import Card from '@material-ui/core/Card';
+// import CardContent from '@material-ui/core/CardContent';
+// import clsx from 'clsx';
 
 function Cart(props) {
+	const routeParams = useParams();
+	// const [order, setOrder] = useState([]);
+	// let fetchOrder = () => {
+	// 	fetch(`http://localhost:3001/api/e-commerce-app/orders/${routeParams}`)
+	// 		.then(response => response.json())
+	// 		.then(result => {
+	// 			console.log(result);
+	// 			setOrder(result);
+	// 		});
+	// };
+
+	// useEffect(() => {
+	// 	fetchOrder();
+	// }, []);
+
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
-	const routeParams = useParams();
+
 	// const [tabValue, setTabValue] = useState(0);
 	// const [map, setMap] = useState('shipping');
 
@@ -33,11 +48,11 @@ function Cart(props) {
 		dispatch(Actions.getOrder(routeParams));
 	}, [dispatch, routeParams]);
 
-	const formatter = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		minimumFractionDigits: 2
-	});
+	// const formatter = new Intl.NumberFormat('en-US', {
+	// 	style: 'currency',
+	// 	currency: 'USD',
+	// 	minimumFractionDigits: 2
+	// });
 
 	return (
 		<FusePageSimple

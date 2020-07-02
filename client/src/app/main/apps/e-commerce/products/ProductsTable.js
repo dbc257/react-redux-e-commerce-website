@@ -1,7 +1,5 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import _ from '@lodash';
-import Checkbox from '@material-ui/core/Checkbox';
-import Icon from '@material-ui/core/Icon';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -19,7 +17,6 @@ function ProductsTable(props) {
 	const products = useSelector(({ eCommerceApp }) => eCommerceApp.products.data);
 	const searchText = useSelector(({ eCommerceApp }) => eCommerceApp.products.searchText);
 
-	const [selected, setSelected] = useState([]);
 	const [data, setData] = useState(products);
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -55,14 +52,6 @@ function ProductsTable(props) {
 		});
 	}
 
-	function handleSelectAllClick(event) {
-		if (event.target.checked) {
-			setSelected(data.map(n => n.id));
-			return;
-		}
-		setSelected([]);
-	}
-
 	function handleClick(item) {
 		props.history.push(`/apps/e-commerce/products/${item.id}/${item.handle}`);
 	}
@@ -79,13 +68,7 @@ function ProductsTable(props) {
 		<div className="w-full flex flex-col">
 			<FuseScrollbars className="flex-grow overflow-x-auto">
 				<Table className="min-w-xl" aria-labelledby="tableTitle">
-					<ProductsTableHead
-						numSelected={selected.length}
-						order={order}
-						onSelectAllClick={handleSelectAllClick}
-						onRequestSort={handleRequestSort}
-						rowCount={data.length}
-					/>
+					<ProductsTableHead order={order} onRequestSort={handleRequestSort} rowCount={data.length} />
 
 					<TableBody>
 						{_.orderBy(
@@ -106,18 +89,25 @@ function ProductsTable(props) {
 						)
 							.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 							.map(n => {
-								const isSelected = selected.indexOf(n.id) !== -1;
 								return (
 									<TableRow
 										className="h-64 cursor-pointer"
 										hover
-										role="checkbox"
-										aria-checked={isSelected}
-										tabIndex={-1}
 										key={n.id}
-										// selected={isSelected}
 										onClick={event => handleClick(n)}
 									>
+										{/* <TableCell className="w-52" component="th" scope="row" padding="none">
+											{n.image ? (
+												<img className="w-full block rounded" src={n.image} alt={n.name} />
+											) : (
+												<img
+													className="w-full block rounded"
+													src="assets/images/ecommerce/product-image-placeholder.png"
+													alt={n.name}
+												/>
+											)}
+										</TableCell> */}
+
 										<TableCell className="w-52" component="th" scope="row" padding="none">
 											{n.images.length > 0 && n.featuredImageId ? (
 												<img
@@ -137,6 +127,10 @@ function ProductsTable(props) {
 										<TableCell component="th" scope="row">
 											{n.name}
 										</TableCell>
+
+										{/* <TableCell className="truncate" component="th" scope="row">
+											{n.categories}
+										</TableCell> */}
 
 										<TableCell className="truncate" component="th" scope="row">
 											{n.categories.join(', ')}

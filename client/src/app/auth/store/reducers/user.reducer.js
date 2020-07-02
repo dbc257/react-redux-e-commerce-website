@@ -6,7 +6,7 @@ const initialState = {
 		displayName: '',
 		photoURL: '',
 		email: '',
-		shortcuts: []
+		shortcuts: ['e-commerce']
 	}
 };
 

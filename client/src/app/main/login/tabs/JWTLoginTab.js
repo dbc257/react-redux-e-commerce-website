@@ -155,13 +155,13 @@ function JWTLoginTab(props) {
 						</tr>
 						<tr>
 							<td>
-								<Typography>Staff</Typography>
+								<Typography>User</Typography>
 							</td>
 							<td>
-								<Typography>staff</Typography>
+								<Typography>user</Typography>
 							</td>
 							<td>
-								<Typography>staff</Typography>
+								<Typography>user</Typography>
 							</td>
 						</tr>
 					</tbody>

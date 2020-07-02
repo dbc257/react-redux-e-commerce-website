@@ -1,16 +1,17 @@
 import FuseAnimate from '@fuse/core/FuseAnimate';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import Input from '@material-ui/core/Input';
-import Paper from '@material-ui/core/Paper';
-import { ThemeProvider } from '@material-ui/core/styles';
+// import Input from '@material-ui/core/Input';
+// import Paper from '@material-ui/core/Paper';
+// import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import * as Actions from '../store/actions';
+// import { useDispatch, useSelector } from 'react-redux';
+// import * as Actions from '../store/actions';
 import { useTheme } from '@material-ui/core/styles';
-import _ from '@lodash';
-import { Link, useParams } from 'react-router-dom';
+// import _ from '@lodash';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function CheckoutHeader(props) {
 	// const dispatch = useDispatch();
@@ -50,22 +51,23 @@ function CheckoutHeader(props) {
 					) : null}
 				</div>
 			</div>
+			<div>
+				<FuseAnimate animation="transition.slideRightIn" delay={300}>
+					<Button
+						className="whitespace-no-wrap normal-case"
+						variant="contained"
+						color="secondary"
+						component={Link}
+						to="/apps/e-commerce/products"
+						// disabled={!canBeSubmitted()}
+						// onClick={() => dispatch(Actions.saveProduct(form))}
+					>
+						<Icon>attach_money</Icon>
+						Complete Order
+					</Button>
+				</FuseAnimate>
+			</div>
 		</div>
-		// 	<div>
-		// 		<FuseAnimate animation="transition.slideRightIn" delay={300}>
-		// 			<Button
-		// 				className="whitespace-no-wrap normal-case"
-		// 				variant="contained"
-		// 				color="secondary"
-		// 				// disabled={!canBeSubmitted()}
-		// 				// onClick={() => dispatch(Actions.saveProduct(form))}
-		// 			>
-		// 				<Icon>add_shopping_cart</Icon>
-		// 				Add To Cart
-		// 			</Button>
-		// 		</FuseAnimate>
-		// 	</div>
-		// </div> <div className="flex flex-1 flex-col items-center sm:items-start">
 	);
 }
 

@@ -1,6 +1,6 @@
 import FuseSplashScreen from '@fuse/core/FuseSplashScreen';
 import * as userActions from 'app/auth/store/actions';
-import auth0Service from 'app/services/auth0Service';
+// import auth0Service from 'app/services/auth0Service';
 // import firebaseService from 'app/services/firebaseService';
 import jwtService from 'app/services/jwtService';
 import * as Actions from 'app/store/actions';
@@ -17,7 +17,7 @@ class Auth extends Component {
 		return Promise.all([
 			// Comment the lines which you do not use
 			// this.firebaseCheck(),
-			this.auth0Check(),
+			// this.auth0Check(),
 			this.jwtCheck()
 		]).then(() => {
 			this.setState({ waitAuthCheck: false });
@@ -67,33 +67,33 @@ class Auth extends Component {
 			return Promise.resolve();
 		});
 
-	auth0Check = () =>
-		new Promise(resolve => {
-			auth0Service.init(success => {
-				if (!success) {
-					resolve();
-				}
-			});
+	// auth0Check = () =>
+	// 	new Promise(resolve => {
+	// 		auth0Service.init(success => {
+	// 			if (!success) {
+	// 				resolve();
+	// 			}
+	// 		});
 
-			if (auth0Service.isAuthenticated()) {
-				this.props.showMessage({ message: 'Logging in with Auth0' });
+	// 		if (auth0Service.isAuthenticated()) {
+	// 			this.props.showMessage({ message: 'Logging in with Auth0' });
 
-				/**
-				 * Retrieve user data from Auth0
-				 */
-				auth0Service.getUserData().then(tokenData => {
-					this.props.setUserDataAuth0(tokenData);
+	// 			/**
+	// 			 * Retrieve user data from Auth0
+	// 			 */
+	// 			auth0Service.getUserData().then(tokenData => {
+	// 				this.props.setUserDataAuth0(tokenData);
 
-					resolve();
+	// 				resolve();
 
-					this.props.showMessage({ message: 'Logged in with Auth0' });
-				});
-			} else {
-				resolve();
-			}
+	// 				this.props.showMessage({ message: 'Logged in with Auth0' });
+	// 			});
+	// 		} else {
+	// 			resolve();
+	// 		}
 
-			return Promise.resolve();
-		});
+	// 		return Promise.resolve();
+	// 	});
 
 	// firebaseCheck = () =>
 	// 	new Promise(resolve => {
@@ -140,7 +140,7 @@ function mapDispatchToProps(dispatch) {
 		{
 			logout: userActions.logoutUser,
 			setUserData: userActions.setUserData,
-			setUserDataAuth0: userActions.setUserDataAuth0,
+			// setUserDataAuth0: userActions.setUserDataAuth0,
 			// setUserDataFirebase: userActions.setUserDataFirebase,
 			showMessage: Actions.showMessage,
 			hideMessage: Actions.hideMessage

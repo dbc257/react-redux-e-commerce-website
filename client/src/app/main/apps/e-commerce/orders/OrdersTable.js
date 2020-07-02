@@ -97,9 +97,9 @@ function OrdersTable(props) {
 			<FuseScrollbars className="flex-grow overflow-x-auto">
 				<Table className="min-w-xl" aria-labelledby="tableTitle">
 					<OrdersTableHead
-						numSelected={selected.length}
+						// numSelected={selected.length}
 						order={order}
-						onSelectAllClick={handleSelectAllClick}
+						// onSelectAllClick={handleSelectAllClick}
 						onRequestSort={handleRequestSort}
 						rowCount={data.length}
 					/>
@@ -132,25 +132,25 @@ function OrdersTable(props) {
 						)
 							.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 							.map(n => {
-								const isSelected = selected.indexOf(n.id) !== -1;
+								// const isSelected = selected.indexOf(n.id) !== -1;
 								return (
 									<TableRow
 										className="h-64 cursor-pointer"
 										hover
 										role="checkbox"
-										aria-checked={isSelected}
+										// aria-checked={isSelected}
 										tabIndex={-1}
 										key={n.id}
-										selected={isSelected}
+										// selected={isSelected}
 										onClick={event => handleClick(n)}
 									>
-										<TableCell className="w-64 text-center" padding="none">
+										{/* <TableCell className="w-64 text-center" padding="none">
 											<Checkbox
 												checked={isSelected}
 												onClick={event => event.stopPropagation()}
 												onChange={event => handleCheck(event, n.id)}
 											/>
-										</TableCell>
+										</TableCell> */}
 
 										<TableCell component="th" scope="row">
 											{n.id}
