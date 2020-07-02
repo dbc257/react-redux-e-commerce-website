@@ -1,5 +1,5 @@
 import AppBar from '@material-ui/core/AppBar';
-// import Avatar from '@material-ui/core/Avatar';
+import Avatar from '@material-ui/core/Avatar';
 // import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import clsx from 'clsx';
@@ -65,6 +65,15 @@ function UserNavbarHeader(props) {
 						: 'assets/images/avatars/profile.jpg'
 				}
 			/> */}
+			<Avatar
+				// className={clsx(classes.avatar, 'avatar')}
+				alt="user photo"
+				src={
+					user.data.photoURL && user.data.photoURL !== ''
+						? user.data.photoURL
+						: 'assets/images/avatars/profile.jpg'
+				}
+			/>
 		</AppBar>
 	);
 }
