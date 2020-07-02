@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 // require("dotenv").config();
 
 const eCommerceDBRouter = require("./routes/api");
-app.use("/api", eCommerceDBRouter);
+app.use("/", eCommerceDBRouter);
 
-app.use(express.static(path.join(__dirname, "build")));
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+// app.use(express.static(path.join(__dirname, "build")));
+// app.get("/", function (req, res) {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 
 const port = process.env.PORT || 3001;
 

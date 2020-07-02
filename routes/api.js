@@ -3190,19 +3190,22 @@ const eCommerceDB = {
   ],
 };
 
-router.get("/json", (req, res) => {
+router.get("/api/json", (req, res) => {
   res.json(eCommerceDB);
 });
 
-router.get("/e-commerce-app/products", (req, res) => {
+router.get("/api/e-commerce-app/products", (req, res) => {
   res.json(eCommerceDB.products);
 });
 
-router.get("/e-commerce-app/product/:productId/:productHandle?", (req, res) => {
-  const productId = req.params.productId;
-  const response = eCommerceDB.products.find((p) => p.id === productId);
-  res.json(response);
-});
+router.get(
+  "/api/e-commerce-app/product/:productId/:productHandle?",
+  (req, res) => {
+    const productId = req.params.productId;
+    const response = eCommerceDB.products.find((p) => p.id === productId);
+    res.json(response);
+  }
+);
 
 // router.post("/api/e-commerce-app/new-product/save", (req, res) => {
 //   const data = JSON.parse(req.data);
@@ -3225,11 +3228,11 @@ router.get("/e-commerce-app/product/:productId/:productHandle?", (req, res) => {
 //   res.json(product);
 // });
 
-router.get("/e-commerce-app/orders", (req, res) => {
+router.get("/api/e-commerce-app/orders", (req, res) => {
   res.json(eCommerceDB.orders);
 });
 
-router.get("/e-commerce-app/order/:orderId", (req, res) => {
+router.get("/api/e-commerce-app/order/:orderId", (req, res) => {
   const orderId = req.params.orderId;
   const response = eCommerceDB.orders.find((o) => o.id === orderId);
   res.json(response);
