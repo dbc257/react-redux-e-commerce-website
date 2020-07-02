@@ -26,7 +26,7 @@ const ECommerceAppConfig = {
 			component: React.lazy(() => import('./product/Product'))
 		},
 		{
-			path: '/apps/e-commerce/products',
+			path: '/',
 			component: React.lazy(() => import('./products/Products'))
 		},
 		{
@@ -40,8 +40,8 @@ const ECommerceAppConfig = {
 			component: React.lazy(() => import('./orders/Orders'))
 		},
 		{
-			path: '/apps/e-commerce',
-			component: () => <Redirect to="/apps/e-commerce/products" />
+			path: '/apps/e-commerce/products',
+			component: () => <Redirect to="/" />
 		}
 	]
 };

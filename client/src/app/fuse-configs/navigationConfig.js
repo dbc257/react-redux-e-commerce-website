@@ -16,13 +16,13 @@ const navigationConfig = [
 		translate: 'ECOMMERCE',
 		type: 'collapse',
 		icon: 'shopping_cart',
-		url: '/apps/e-commerce',
+		url: '/',
 		children: [
 			{
 				id: 'e-commerce-products',
 				title: 'Products',
 				type: 'item',
-				url: '/apps/e-commerce/products',
+				url: '/',
 				icon: 'face',
 				exact: true
 			},
