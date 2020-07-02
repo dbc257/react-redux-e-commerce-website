@@ -5,6 +5,7 @@ export const SET_PRODUCTS_SEARCH_TEXT = '[E-COMMERCE APP] SET PRODUCTS SEARCH TE
 
 export function getProducts() {
 	const request = axios.get('http://localhost:3001/api/e-commerce-app/products');
+	// const request = axios.get('/api/e-commerce-app/products');
 
 	return dispatch =>
 		request.then(response =>

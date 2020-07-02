@@ -19,7 +19,7 @@ export function getOrder(params) {
 
 export function saveOrder(data) {
 	const request = axios.post('/api/e-commerce-app/order/save', data);
-
+	console.log(data);
 	return dispatch =>
 		request.then(response => {
 			dispatch(showMessage({ message: 'Order Saved' }));

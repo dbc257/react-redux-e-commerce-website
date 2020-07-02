@@ -96,9 +96,25 @@ function ProductsTable(props) {
 										key={n.id}
 										onClick={event => handleClick(n)}
 									>
-										<TableCell className="w-52" component="th" scope="row" padding="none">
+										{/* <TableCell className="w-52" component="th" scope="row" padding="none">
 											{n.image ? (
 												<img className="w-full block rounded" src={n.image} alt={n.name} />
+											) : (
+												<img
+													className="w-full block rounded"
+													src="assets/images/ecommerce/product-image-placeholder.png"
+													alt={n.name}
+												/>
+											)}
+										</TableCell> */}
+
+										<TableCell className="w-52" component="th" scope="row" padding="none">
+											{n.images.length > 0 && n.featuredImageId ? (
+												<img
+													className="w-full block rounded"
+													src={_.find(n.images, { id: n.featuredImageId }).url}
+													alt={n.name}
+												/>
 											) : (
 												<img
 													className="w-full block rounded"
@@ -111,6 +127,10 @@ function ProductsTable(props) {
 										<TableCell component="th" scope="row">
 											{n.name}
 										</TableCell>
+
+										{/* <TableCell className="truncate" component="th" scope="row">
+											{n.categories}
+										</TableCell> */}
 
 										<TableCell className="truncate" component="th" scope="row">
 											{n.categories.join(', ')}

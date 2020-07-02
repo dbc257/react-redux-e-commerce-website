@@ -1,7 +1,7 @@
 import FusePageSimple from '@fuse/core/FusePageSimple';
 // import FusePageCarded from '@fuse/core/FusePageCarded';
 import withReducer from 'app/store/withReducer';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import reducer from '../store/reducers';
 import CartHeader from './CartHeader';
 // import CheckoutTable from './CheckoutTable';
