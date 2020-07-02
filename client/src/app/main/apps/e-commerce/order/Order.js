@@ -37,7 +37,7 @@ function Order(props) {
 
 	const routeParams = useParams();
 	const [tabValue, setTabValue] = useState(0);
-	const [map, setMap] = useState('shipping');
+	// const [map, setMap] = useState('shipping');
 
 	useDeepCompareEffect(() => {
 		dispatch(Actions.getOrder(routeParams));

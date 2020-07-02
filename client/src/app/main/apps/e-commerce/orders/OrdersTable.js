@@ -1,7 +1,7 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import FuseUtils from '@fuse/utils';
 import _ from '@lodash';
-import Checkbox from '@material-ui/core/Checkbox';
+// import Checkbox from '@material-ui/core/Checkbox';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -19,7 +19,7 @@ function OrdersTable(props) {
 	const orders = useSelector(({ eCommerceApp }) => eCommerceApp.orders.data);
 	const searchText = useSelector(({ eCommerceApp }) => eCommerceApp.orders.searchText);
 
-	const [selected, setSelected] = useState([]);
+	// const [selected, setSelected] = useState([]);
 	const [data, setData] = useState(orders);
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -55,34 +55,34 @@ function OrdersTable(props) {
 		});
 	}
 
-	function handleSelectAllClick(event) {
-		if (event.target.checked) {
-			setSelected(data.map(n => n.id));
-			return;
-		}
-		setSelected([]);
-	}
+	// function handleSelectAllClick(event) {
+	// 	if (event.target.checked) {
+	// 		setSelected(data.map(n => n.id));
+	// 		return;
+	// 	}
+	// 	setSelected([]);
+	// }
 
 	function handleClick(item) {
 		props.history.push(`/apps/e-commerce/orders/${item.id}`);
 	}
 
-	function handleCheck(event, id) {
-		const selectedIndex = selected.indexOf(id);
-		let newSelected = [];
+	// function handleCheck(event, id) {
+	// 	const selectedIndex = selected.indexOf(id);
+	// 	let newSelected = [];
 
-		if (selectedIndex === -1) {
-			newSelected = newSelected.concat(selected, id);
-		} else if (selectedIndex === 0) {
-			newSelected = newSelected.concat(selected.slice(1));
-		} else if (selectedIndex === selected.length - 1) {
-			newSelected = newSelected.concat(selected.slice(0, -1));
-		} else if (selectedIndex > 0) {
-			newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
-		}
+	// 	if (selectedIndex === -1) {
+	// 		newSelected = newSelected.concat(selected, id);
+	// 	} else if (selectedIndex === 0) {
+	// 		newSelected = newSelected.concat(selected.slice(1));
+	// 	} else if (selectedIndex === selected.length - 1) {
+	// 		newSelected = newSelected.concat(selected.slice(0, -1));
+	// 	} else if (selectedIndex > 0) {
+	// 		newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
+	// 	}
 
-		setSelected(newSelected);
-	}
+	// 	setSelected(newSelected);
+	// }
 
 	function handleChangePage(event, value) {
 		setPage(value);
