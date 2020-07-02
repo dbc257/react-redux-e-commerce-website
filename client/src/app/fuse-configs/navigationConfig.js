@@ -1,4 +1,4 @@
-import { authRoles } from 'app/auth';
+// import { authRoles } from 'app/auth';
 // import MaterialUIComponentsNavigation from 'app/main/documentation/material-ui-components/MaterialUIComponentsNavigation';
 // import i18next from 'i18next';
 // import ar from './navigation-i18n/ar';
@@ -45,7 +45,7 @@ const navigationConfig = [
 				id: 'e-commerce-cart',
 				title: 'Cart',
 				type: 'item',
-				auth: authRoles.user, // ['user']
+				// auth: authRoles.user, // ['user']
 				url: '/apps/e-commerce/cart/1',
 				icon: 'account_circle',
 				exact: true
@@ -54,7 +54,7 @@ const navigationConfig = [
 				id: 'e-commerce-checkout',
 				title: 'Checkout',
 				type: 'item',
-				auth: authRoles.user, // ['user']
+				// auth: authRoles.user, // ['user']
 				url: '/apps/e-commerce/checkout/1',
 				icon: 'account_circle',
 				exact: true
@@ -63,7 +63,7 @@ const navigationConfig = [
 				id: 'e-commerce-orders',
 				title: 'Orders',
 				type: 'item',
-				auth: authRoles.admin, //['admin']
+				// auth: authRoles.admin, //['admin']
 				url: '/apps/e-commerce/orders',
 				icon: 'verified_user',
 				exact: true
@@ -72,7 +72,7 @@ const navigationConfig = [
 				id: 'e-commerce-order-detail',
 				title: 'Order Detail',
 				type: 'item',
-				auth: authRoles.admin, //['admin']
+				// auth: authRoles.admin, //['admin']
 				url: '/apps/e-commerce/orders/1',
 				icon: 'verified_user',
 				exact: true

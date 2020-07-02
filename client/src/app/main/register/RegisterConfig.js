@@ -1,4 +1,4 @@
-import { authRoles } from 'app/auth';
+// import { authRoles } from 'app/auth';
 import Register from './Register';
 
 const RegisterConfig = {
@@ -23,7 +23,7 @@ const RegisterConfig = {
 			}
 		}
 	},
-	auth: authRoles.onlyGuest,
+	// auth: authRoles.onlyGuest,
 	routes: [
 		{
 			path: '/register',

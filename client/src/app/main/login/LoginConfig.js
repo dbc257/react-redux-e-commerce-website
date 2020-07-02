@@ -1,4 +1,6 @@
-import { authRoles } from 'app/auth';
+// import { authRoles } from 'app/auth';
+// import React from 'react';
+// import { Redirect } from 'react-router-dom';
 import Login from './Login';
 
 const LoginConfig = {
@@ -23,7 +25,6 @@ const LoginConfig = {
 			}
 		}
 	},
-	auth: authRoles.onlyGuest,
 	routes: [
 		{
 			path: '/login',
