@@ -29,7 +29,7 @@ function UserMenu(props) {
 		<>
 			<Button className="h-64" onClick={userMenuClick}>
 				{user.data.photoURL ? (
-					<Avatar className="" alt="" src={user.data.displayName[0]} />
+					<Avatar className="" alt="user photo" src={user.data.photoURL} />
 				) : (
 					<Avatar className="">{user.data.displayName[0]}</Avatar>
 				)}

@@ -70,7 +70,7 @@ function Login() {
 									<img
 										className="h-40 p-4 bg-black rounded-12"
 										src="assets/images/logos/jwt.svg"
-										alt="firebase"
+										alt="jwt"
 									/>
 								}
 								className="min-w-0"

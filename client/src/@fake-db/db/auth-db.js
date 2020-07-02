@@ -17,8 +17,8 @@ const authDB = {
 			password: 'admin',
 			role: 'admin',
 			data: {
-				displayName: 'Abbott Keitch',
-				photoURL: 'assets/images/avatars/Abbott.jpg',
+				displayName: 'David Carlisle',
+				photoURL: 'assets/images/avatars/David.jpeg',
 				email: 'admin',
 				settings: {
 					layout: {
@@ -57,12 +57,12 @@ const authDB = {
 		{
 			uuid: 'XgbuVEXBU6gtSKdbTYR1Zbbby1i3',
 			from: 'custom-db',
-			password: 'staff',
-			role: 'staff',
+			password: 'user',
+			role: 'user',
 			data: {
-				displayName: 'Arnold Matlock',
-				photoURL: 'assets/images/avatars/Arnold.jpg',
-				email: 'staff',
+				displayName: 'Dollie Bullock',
+				photoURL: 'assets/images/avatars/joyce.jpg',
+				email: 'user',
 				settings: {
 					layout: {
 						style: 'layout1',

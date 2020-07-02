@@ -1519,7 +1519,7 @@ const eCommerceDB = {
         id: 1,
         firstName: "Dollie",
         lastName: "Bullock",
-        avatar: "assets/images/avatars/Abbott.jpg",
+        avatar: "assets/images/avatars/joyce.jpg",
         company: "Saois",
         jobTitle: "Digital Archivist",
         email: "abbott@withinpixels.com",

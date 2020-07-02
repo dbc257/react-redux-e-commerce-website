@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { authRoles } from 'app/auth';
 
 const ECommerceAppConfig = {
 	settings: {
@@ -8,10 +9,12 @@ const ECommerceAppConfig = {
 	routes: [
 		{
 			path: '/apps/e-commerce/checkout/:orderId',
+			auth: authRoles.user, // ['user']
 			component: React.lazy(() => import('./checkout/Checkout'))
 		},
 		{
 			path: '/apps/e-commerce/cart/:orderId',
+			auth: authRoles.user, // ['user']
 			component: React.lazy(() => import('./cart/Cart'))
 		},
 		// {
@@ -28,10 +31,12 @@ const ECommerceAppConfig = {
 		},
 		{
 			path: '/apps/e-commerce/orders/:orderId',
+			auth: authRoles.admin, //['admin']
 			component: React.lazy(() => import('./order/Order'))
 		},
 		{
 			path: '/apps/e-commerce/orders',
+			auth: authRoles.admin, //['admin']
 			component: React.lazy(() => import('./orders/Orders'))
 		},
 		{
