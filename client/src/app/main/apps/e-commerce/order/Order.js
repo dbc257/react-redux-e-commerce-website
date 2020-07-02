@@ -41,7 +41,6 @@ function Order(props) {
 
 	useDeepCompareEffect(() => {
 		dispatch(Actions.getOrder(routeParams));
-		console.log(routeParams);
 	}, [dispatch, routeParams]);
 
 	function handleChangeTab(event, value) {
