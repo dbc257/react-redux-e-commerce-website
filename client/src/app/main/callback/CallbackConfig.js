@@ -1,5 +1,5 @@
-import { authRoles } from 'app/auth';
-import Callback from './Callback';
+// import { authRoles } from 'app/auth';
+// import Callback from './Callback';
 
 const CallbackConfig = {
 	settings: {
@@ -22,14 +22,14 @@ const CallbackConfig = {
 				}
 			}
 		}
-	},
-	auth: authRoles.onlyGuest,
-	routes: [
-		{
-			path: '/callback',
-			component: Callback
-		}
-	]
+	}
+	// auth: authRoles.onlyGuest,
+	// routes: [
+	// 	{
+	// 		path: '/callback',
+	// 		component: Callback
+	// 	}
+	// ]
 };
 
 export default CallbackConfig;

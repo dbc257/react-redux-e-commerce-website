@@ -21,7 +21,7 @@ export function getProduct(params) {
 export function saveProduct(data) {
 	const request = axios.post('/api/e-commerce-app/product/save', data);
 	// const request = axios.post('http://localhost:3001/api/e-commerce-app/product/save', data);
-	console.log(data);
+
 	return dispatch =>
 		request.then(response => {
 			dispatch(showMessage({ message: 'Product Saved' }));

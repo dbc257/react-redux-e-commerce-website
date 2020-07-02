@@ -1,6 +1,6 @@
 import history from '@history';
 import _ from '@lodash';
-import auth0Service from 'app/services/auth0Service';
+// import auth0Service from 'app/services/auth0Service';
 // import firebaseService from 'app/services/firebaseService';
 import jwtService from 'app/services/jwtService';
 import * as MessageActions from 'app/store/actions/fuse/message.actions';
@@ -14,23 +14,23 @@ export const USER_LOGGED_OUT = '[USER] LOGGED OUT';
 /**
  * Set user data from Auth0 token data
  */
-export function setUserDataAuth0(tokenData) {
-	const user = {
-		role: ['admin'],
-		from: 'auth0',
-		data: {
-			displayName: tokenData.username,
-			photoURL: tokenData.picture,
-			email: tokenData.email,
-			settings:
-				tokenData.user_metadata && tokenData.user_metadata.settings ? tokenData.user_metadata.settings : {},
-			shortcuts:
-				tokenData.user_metadata && tokenData.user_metadata.shortcuts ? tokenData.user_metadata.shortcuts : []
-		}
-	};
+// export function setUserDataAuth0(tokenData) {
+// 	const user = {
+// 		role: ['admin'],
+// 		from: 'auth0',
+// 		data: {
+// 			displayName: tokenData.username,
+// 			photoURL: tokenData.picture,
+// 			email: tokenData.email,
+// 			settings:
+// 				tokenData.user_metadata && tokenData.user_metadata.settings ? tokenData.user_metadata.settings : {},
+// 			shortcuts:
+// 				tokenData.user_metadata && tokenData.user_metadata.shortcuts ? tokenData.user_metadata.shortcuts : []
+// 		}
+// 	};
 
-	return setUserData(user);
-}
+// 	return setUserData(user);
+// }
 
 /**
  * Set user data from Firebase data
@@ -173,10 +173,10 @@ export function logoutUser() {
 			// 	firebaseService.signOut();
 			// 	break;
 			// }
-			case 'auth0': {
-				auth0Service.logout();
-				break;
-			}
+			// case 'auth0': {
+			// 	auth0Service.logout();
+			// 	break;
+			// }
 			default: {
 				jwtService.logout();
 			}
@@ -211,20 +211,20 @@ function updateUserData(user, dispatch) {
 		// 		});
 		// 	break;
 		// }
-		case 'auth0': {
-			auth0Service
-				.updateUserData({
-					settings: user.data.settings,
-					shortcuts: user.data.shortcuts
-				})
-				.then(() => {
-					dispatch(MessageActions.showMessage({ message: 'User data saved to auth0' }));
-				})
-				.catch(error => {
-					dispatch(MessageActions.showMessage({ message: error.message }));
-				});
-			break;
-		}
+		// case 'auth0': {
+		// 	auth0Service
+		// 		.updateUserData({
+		// 			settings: user.data.settings,
+		// 			shortcuts: user.data.shortcuts
+		// 		})
+		// 		.then(() => {
+		// 			dispatch(MessageActions.showMessage({ message: 'User data saved to auth0' }));
+		// 		})
+		// 		.catch(error => {
+		// 			dispatch(MessageActions.showMessage({ message: error.message }));
+		// 		});
+		// 	break;
+		// }
 		default: {
 			jwtService
 				.updateUserData(user)
