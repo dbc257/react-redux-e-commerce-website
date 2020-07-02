@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Auth0RegisterTab from './tabs/Auth0RegisterTab';
+// import Auth0RegisterTab from './tabs/Auth0RegisterTab';
 // import FirebaseRegisterTab from './tabs/FirebaseRegisterTab';
 import JWTRegisterTab from './tabs/JWTRegisterTab';
 
@@ -81,16 +81,16 @@ function Register() {
 								className="min-w-0"
 								label="Firebase"
 							/> */}
-							<Tab
+							{/* <Tab
 								icon={<img className="h-40" src="assets/images/logos/auth0.svg" alt="auth0" />}
 								className="min-w-0"
 								label="Auth0"
-							/>
+							/> */}
 						</Tabs>
 
 						{selectedTab === 0 && <JWTRegisterTab />}
 						{/* {selectedTab === 1 && <FirebaseRegisterTab />} */}
-						{selectedTab === 2 && <Auth0RegisterTab />}
+						{/* {selectedTab === 2 && <Auth0RegisterTab />} */}
 
 						<div className="flex flex-col items-center justify-center pt-32 pb-24">
 							<span className="font-medium">Already have an account?</span>

@@ -12,7 +12,7 @@ import FuseAnimateGroup from '@fuse/core/FuseAnimateGroup';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import FuseAnimate from '@fuse/core/FuseAnimate';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import { useTheme } from '@material-ui/core/styles';
 import { useDeepCompareEffect } from '@fuse/hooks';
 
@@ -93,7 +93,7 @@ function Product(props) {
 							</div>
 						</div>
 					</div>
-					{/* <div>
+					<div>
 						<FuseAnimate animation="transition.slideRightIn" delay={300}>
 							<Button
 								className="whitespace-no-wrap normal-case"
@@ -102,11 +102,11 @@ function Product(props) {
 								component={Link}
 								to="/apps/e-commerce/cart/1"
 							>
-								<Icon>add_shopping_cart</Icon>
-								Add To Cart
+								<Icon>shopping_cart</Icon>
+								Go To Cart
 							</Button>
 						</FuseAnimate>
-					</div> */}
+					</div>
 				</div>
 			}
 			content={

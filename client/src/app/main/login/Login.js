@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Auth0LoginTab from './tabs/Auth0LoginTab';
+// import Auth0LoginTab from './tabs/Auth0LoginTab';
 // import FirebaseLoginTab from './tabs/FirebaseLoginTab';
 import JWTLoginTab from './tabs/JWTLoginTab';
 
@@ -81,16 +81,16 @@ function Login() {
 								className="min-w-0"
 								label="Firebase"
 							/> */}
-							<Tab
+							{/* <Tab
 								icon={<img className="h-40" src="assets/images/logos/auth0.svg" alt="auth0" />}
 								className="min-w-0"
 								label="Auth0"
-							/>
+							/> */}
 						</Tabs>
 
 						{selectedTab === 0 && <JWTLoginTab />}
 						{/* {selectedTab === 1 && <FirebaseLoginTab />} */}
-						{selectedTab === 2 && <Auth0LoginTab />}
+						{/* {selectedTab === 2 && <Auth0LoginTab />} */}
 
 						<div className="flex flex-col items-center justify-center pt-32">
 							<span className="font-medium">Don't have an account?</span>

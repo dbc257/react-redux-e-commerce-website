@@ -51,7 +51,7 @@ const authDB = {
 						footer: 'defaultDark'
 					}
 				},
-				shortcuts: ['calendar', 'mail', 'contacts']
+				shortcuts: ['e-commerce']
 			}
 		},
 		{
@@ -65,7 +65,7 @@ const authDB = {
 				email: 'staff',
 				settings: {
 					layout: {
-						style: 'layout2',
+						style: 'layout1',
 						config: {
 							mode: 'boxed',
 							scroll: 'content',
@@ -90,7 +90,7 @@ const authDB = {
 						footer: 'mainThemeDark'
 					}
 				},
-				shortcuts: ['calendar', 'mail', 'contacts', 'todo']
+				shortcuts: ['e-commerce']
 			}
 		}
 	]

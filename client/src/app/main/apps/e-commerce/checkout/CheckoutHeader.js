@@ -1,5 +1,5 @@
 import FuseAnimate from '@fuse/core/FuseAnimate';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 // import Input from '@material-ui/core/Input';
 // import Paper from '@material-ui/core/Paper';
@@ -51,22 +51,23 @@ function CheckoutHeader(props) {
 					) : null}
 				</div>
 			</div>
+			<div>
+				<FuseAnimate animation="transition.slideRightIn" delay={300}>
+					<Button
+						className="whitespace-no-wrap normal-case"
+						variant="contained"
+						color="secondary"
+						component={Link}
+						to="/apps/e-commerce/products"
+						// disabled={!canBeSubmitted()}
+						// onClick={() => dispatch(Actions.saveProduct(form))}
+					>
+						<Icon>attach_money</Icon>
+						Complete Order
+					</Button>
+				</FuseAnimate>
+			</div>
 		</div>
-		// 	<div>
-		// 		<FuseAnimate animation="transition.slideRightIn" delay={300}>
-		// 			<Button
-		// 				className="whitespace-no-wrap normal-case"
-		// 				variant="contained"
-		// 				color="secondary"
-		// 				// disabled={!canBeSubmitted()}
-		// 				// onClick={() => dispatch(Actions.saveProduct(form))}
-		// 			>
-		// 				<Icon>add_shopping_cart</Icon>
-		// 				Add To Cart
-		// 			</Button>
-		// 		</FuseAnimate>
-		// 	</div>
-		// </div> <div className="flex flex-1 flex-col items-center sm:items-start">
 	);
 }
 

@@ -8,11 +8,11 @@ import Icon from '@material-ui/core/Icon';
 import { useTheme } from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import Tooltip from '@material-ui/core/Tooltip';
+// import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import withReducer from 'app/store/withReducer';
-import GoogleMap from 'google-map-react';
+// import GoogleMap from 'google-map-react';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -22,28 +22,15 @@ import reducer from '../store/reducers';
 import OrderInvoice from './OrderInvoice';
 import OrdersStatus from './OrdersStatus';
 
-function Marker(props) {
-	return (
-		<Tooltip title={props.text} placement="top">
-			<Icon className="text-red">place</Icon>
-		</Tooltip>
-	);
-}
+// function Marker(props) {
+// 	return (
+// 		<Tooltip title={props.text} placement="top">
+// 			<Icon className="text-red">place</Icon>
+// 		</Tooltip>
+// 	);
+// }
 
 function Order(props) {
-	// const [orders, setOrders] = useState([]);
-	// let fetchOrders = () => {
-	// 	fetch('http://localhost:3001/api/e-commerce-app/orders')
-	// 		.then(response => response.json())
-	// 		.then(result => {
-	// 		setOrders(result);
-	// 		});
-	// };
-
-	// useEffect(() => {
-	// 	fetchOrders();
-	// }, []);
-
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
 	const theme = useTheme();
@@ -173,8 +160,8 @@ function Order(props) {
 
 										<ExpansionPanel
 											elevation={1}
-											expanded={map === 'shipping'}
-											onChange={() => setMap(map !== 'shipping' ? 'shipping' : false)}
+											// expanded={map === 'shipping'}
+											// onChange={() => setMap(map !== 'shipping' ? 'shipping' : false)}
 										>
 											<ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 												<Typography className="font-600">Shipping Address</Typography>
@@ -183,7 +170,7 @@ function Order(props) {
 												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.shippingAddress.address}
 												</Typography>
-												<div className="w-full h-320">
+												{/* <div className="w-full h-320">
 													<GoogleMap
 														bootstrapURLKeys={{
 															key: process.env.REACT_APP_MAP_KEY
@@ -200,23 +187,23 @@ function Order(props) {
 															lng={order.customer.shippingAddress.lng}
 														/>
 													</GoogleMap>
-												</div>
+												</div> */}
 											</ExpansionPanelDetails>
-										</ExpansionPanel>
+											{/* </ExpansionPanel>
 
 										<ExpansionPanel
 											elevation={1}
 											expanded={map === 'invoice'}
 											onChange={() => setMap(map !== 'invoice' ? 'invoice' : false)}
-										>
-											<ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+										> */}
+											<ExpansionPanelSummary>
 												<Typography className="font-600">Invoice Address</Typography>
 											</ExpansionPanelSummary>
 											<ExpansionPanelDetails className="flex flex-col md:flex-row">
 												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.invoiceAddress.address}
 												</Typography>
-												<div className="w-full h-320">
+												{/* <div className="w-full h-320">
 													<GoogleMap
 														bootstrapURLKeys={{
 															key: process.env.REACT_APP_MAP_KEY
@@ -233,7 +220,7 @@ function Order(props) {
 															lng={order.customer.invoiceAddress.lng}
 														/>
 													</GoogleMap>
-												</div>
+												</div> */}
 											</ExpansionPanelDetails>
 										</ExpansionPanel>
 									</div>

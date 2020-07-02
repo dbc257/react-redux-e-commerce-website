@@ -62,7 +62,7 @@ function CartHeader(props) {
 						// disabled={!canBeSubmitted()}
 						// onClick={() => dispatch(Actions.saveProduct(form))}
 					>
-						<Icon>shopping_cart</Icon>
+						<Icon>add_shopping_cart</Icon>
 						Checkout
 					</Button>
 				</FuseAnimate>

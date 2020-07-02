@@ -1,18 +1,18 @@
-import Checkbox from '@material-ui/core/Checkbox';
-import Icon from '@material-ui/core/Icon';
-import IconButton from '@material-ui/core/IconButton';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
+// import Checkbox from '@material-ui/core/Checkbox';
+// import Icon from '@material-ui/core/Icon';
+// import IconButton from '@material-ui/core/IconButton';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import Menu from '@material-ui/core/Menu';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Tooltip from '@material-ui/core/Tooltip';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import React, { useState } from 'react';
 
 const rows = [
@@ -75,26 +75,26 @@ const useStyles = makeStyles(theme => ({
 
 function OrdersTableHead(props) {
 	const classes = useStyles(props);
-	const [selectedOrdersMenu, setSelectedOrdersMenu] = useState(null);
+	// const [selectedOrdersMenu, setSelectedOrdersMenu] = useState(null);
 
 	const createSortHandler = property => event => {
 		props.onRequestSort(event, property);
 	};
 
-	function openSelectedOrdersMenu(event) {
-		setSelectedOrdersMenu(event.currentTarget);
-	}
+	// function openSelectedOrdersMenu(event) {
+	// 	setSelectedOrdersMenu(event.currentTarget);
+	// }
 
-	function closeSelectedOrdersMenu() {
-		setSelectedOrdersMenu(null);
-	}
+	// function closeSelectedOrdersMenu() {
+	// 	setSelectedOrdersMenu(null);
+	// }
 
 	// const {onSelectAllClick, order, orderBy, numSelected, rowCount} = props;
 
 	return (
 		<TableHead>
 			<TableRow className="h-64">
-				<TableCell padding="none" className="relative w-64 text-center">
+				{/* <TableCell padding="none" className="relative w-64 text-center">
 					<Checkbox
 						indeterminate={props.numSelected > 0 && props.numSelected < props.rowCount}
 						checked={props.numSelected === props.rowCount}
@@ -132,10 +132,10 @@ function OrdersTableHead(props) {
 										<ListItemText primary="Remove" />
 									</MenuItem>
 								</MenuList>
-							</Menu>
+							</Menu> 
 						</div>
 					)}
-				</TableCell>
+				</TableCell> */}
 				{rows.map(row => {
 					return (
 						<TableCell
