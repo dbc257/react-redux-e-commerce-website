@@ -8511,7 +8511,6 @@ fsevents@^1.2.7:
     formsy-react: 2.0.3
     google-map-react: 1.1.7
     history: 4.10.1
-    i18next: 19.4.5
     isomorphic-fetch: 2.2.1
     js-beautify: 1.11.0
     jsonwebtoken: 8.5.1
@@ -9280,15 +9279,6 @@ fsevents@^1.2.7:
   version: 1.0.3
   resolution: "hyphenate-style-name@npm:1.0.3"
   checksum: 3ec167a398a992183dad59a73a0379d057799a56811469ef6e15aaf68313e80c173ed4d504f8f5babf089846136c9c1ea5ac42c25bf38b269f5c361430f062bc
-  languageName: node
-  linkType: hard
-
-"i18next@npm:19.4.5":
-  version: 19.4.5
-  resolution: "i18next@npm:19.4.5"
-  dependencies:
-    "@babel/runtime": ^7.3.1
-  checksum: eef686f67f2510ca18a9077cc501c37f97755be1b8d95c834f5c12f87b1047b9af2c90587aeef31643fcae18edd20fcd4d3bb1491811b31c0e749fccfe530486
   languageName: node
   linkType: hard
 
