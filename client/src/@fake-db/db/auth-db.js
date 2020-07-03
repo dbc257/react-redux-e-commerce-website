@@ -18,7 +18,7 @@ const authDB = {
 			role: 'admin',
 			data: {
 				displayName: 'David Carlisle',
-				photoURL: 'assets/images/avatars/David.jpeg',
+				photoURL: 'assets/images/avatars/david.jpeg',
 				email: 'admin',
 				settings: {
 					layout: {

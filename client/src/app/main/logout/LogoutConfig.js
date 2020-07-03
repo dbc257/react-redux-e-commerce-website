@@ -1,9 +1,9 @@
-// import { authRoles } from 'app/auth';
+import { authRoles } from 'app/auth';
 import { logoutUser } from 'app/auth/store/actions';
 import store from 'app/store';
 
 const LogoutConfig = {
-	// auth: authRoles.user,
+	auth: authRoles.user,
 	routes: [
 		{
 			path: '/logout',

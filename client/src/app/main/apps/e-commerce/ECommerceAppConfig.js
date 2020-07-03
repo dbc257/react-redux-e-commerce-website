@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-// import { authRoles } from 'app/auth';
+import { authRoles } from 'app/auth';
 
 const ECommerceAppConfig = {
 	settings: {
@@ -9,12 +9,12 @@ const ECommerceAppConfig = {
 	routes: [
 		{
 			path: '/apps/e-commerce/checkout/:orderId',
-			// auth: authRoles.user, // ['user']
+			auth: authRoles.user, // ['user']
 			component: React.lazy(() => import('./checkout/Checkout'))
 		},
 		{
 			path: '/apps/e-commerce/cart/:orderId',
-			// auth: authRoles.user, // ['user']
+			auth: authRoles.user, // ['user']
 			component: React.lazy(() => import('./cart/Cart'))
 		},
 		// {
@@ -26,22 +26,22 @@ const ECommerceAppConfig = {
 			component: React.lazy(() => import('./product/Product'))
 		},
 		{
-			path: '/',
+			path: '/apps/e-commerce/products',
 			component: React.lazy(() => import('./products/Products'))
 		},
 		{
 			path: '/apps/e-commerce/orders/:orderId',
-			// auth: authRoles.admin, //['admin']
+			auth: authRoles.admin, //['admin']
 			component: React.lazy(() => import('./order/Order'))
 		},
 		{
 			path: '/apps/e-commerce/orders',
-			// auth: authRoles.admin, //['admin']
+			auth: authRoles.admin, //['admin']
 			component: React.lazy(() => import('./orders/Orders'))
 		},
 		{
-			path: '/apps/e-commerce/products',
-			component: () => <Redirect to="/" />
+			path: '/apps/e-commerce',
+			component: () => <Redirect to="/apps/e-commerce/products" />
 		}
 	]
 };
