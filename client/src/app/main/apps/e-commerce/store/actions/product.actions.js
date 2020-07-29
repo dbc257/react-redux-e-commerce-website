@@ -6,7 +6,7 @@ export const GET_PRODUCT = '[E-COMMERCE APP] GET PRODUCT';
 export const SAVE_PRODUCT = '[E-COMMERCE APP] SAVE PRODUCT';
 
 export function getProduct(params) {
-	const request = axios.get(`https://agile-reef-55162.herokuapp.com/api/e-commerce-app/product/${params.productId}`);
+	const request = axios.get(`https://art-shop-server.herokuapp.com/api/e-commerce-app/product/${params.productId}`);
 	// const request = axios.get('/api/e-commerce-app/product', { params });
 
 	return dispatch =>

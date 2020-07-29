@@ -5,7 +5,7 @@ export const GET_ORDER = '[E-COMMERCE APP] GET ORDER';
 export const SAVE_ORDER = '[E-COMMERCE APP] SAVE ORDER';
 
 export function getOrder(params) {
-	const request = axios.get(`https://agile-reef-55162.herokuapp.com/api/e-commerce-app/order/${params.orderId}`);
+	const request = axios.get(`https://art-shop-server.herokuapp.com/api/e-commerce-app/order/${params.orderId}`);
 	// const request = fetch('http://localhost:3001/api/e-commerce-app/order', { params });
 
 	return dispatch =>

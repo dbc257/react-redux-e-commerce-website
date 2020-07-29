@@ -4,7 +4,7 @@ export const GET_ORDERS = '[E-COMMERCE APP] GET ORDERS';
 export const SET_ORDERS_SEARCH_TEXT = '[E-COMMERCE APP] SET ORDERS SEARCH TEXT';
 
 export function getOrders() {
-	const request = axios.get('https://agile-reef-55162.herokuapp.com/api/e-commerce-app/orders');
+	const request = axios.get('https://art-shop-server.herokuapp.com/api/e-commerce-app/orders');
 	// const request = axios.get('/api/e-commerce-app/orders');
 
 	return dispatch =>
