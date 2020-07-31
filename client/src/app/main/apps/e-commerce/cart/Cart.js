@@ -26,7 +26,7 @@ function Cart(props) {
 	const routeParams = useParams();
 	// const [order, setOrder] = useState([]);
 	// let fetchOrder = () => {
-	// 	fetch(`http://localhost:3001/api/e-commerce-app/orders/${routeParams}`)
+	// 	fetch(`https://bookstrap-bookstore-server.herokuapp.com/api/e-commerce-app/orders/${routeParams}`)
 	// 		.then(response => response.json())
 	// 		.then(result => {
 	// 			console.log(result);
