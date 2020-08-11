@@ -44,17 +44,19 @@ The e-Commerce Art Shop website sells canvas prints. One can visit the site as a
 
 <img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931942-850c1c80-dbd2-11ea-9ec2-a30131aada1e.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929290-aa972700-dbce-11ea-8ba5-fb149d443a50.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931946-86d5e000-dbd2-11ea-8bfd-3ed3c9629b91.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929317-b387f880-dbce-11ea-8e4e-6f9e919b0fc9.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931948-889fa380-dbd2-11ea-9356-3a6622200cd1.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929332-b84cac80-dbce-11ea-8f74-6cb05a5c4e29.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931952-89d0d080-dbd2-11ea-9726-668b7b58db1f.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929350-c0a4e780-dbce-11ea-9e8a-4c50c7ebe8ee.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931955-8c332a80-dbd2-11ea-96f4-d8b3c5cc88b7.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929373-c8fd2280-dbce-11ea-9bde-22a2f7d6d88b.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931963-8dfcee00-dbd2-11ea-8b10-a7a477346bab.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929498-e03c1000-dbce-11ea-9df2-a636c9045a2f.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931966-8fc6b180-dbd2-11ea-9c4e-be962e7b0392.png">
+
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931975-92290b80-dbd2-11ea-97f5-454fb2ca6747.png">
 
 <img width="236" alt="Login Page on Mobile Device" src="https://user-images.githubusercontent.com/62611599/89930230-06ae7b00-dbd0-11ea-9423-3b1a1500101d.png">
 
