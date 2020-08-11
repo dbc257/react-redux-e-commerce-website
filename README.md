@@ -28,7 +28,7 @@ The e-Commerce Art Shop website sells canvas prints. One can visit the site as a
 
 <img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89927932-b08c0880-dbcc-11ea-8e0a-e911ce1f4ef8.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89927957-be418e00-dbcc-11ea-9461-6c498190b2c9.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931922-7f163b80-dbd2-11ea-9e96-ac6e0d10c8e0.png">
 
 <img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929129-6c9a0300-dbce-11ea-9103-bfa9c7acc48f.png">
 
@@ -42,7 +42,7 @@ The e-Commerce Art Shop website sells canvas prints. One can visit the site as a
 
 <img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929265-a23eec00-dbce-11ea-8ce7-5ae5f21bbc82.png">
 
-<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929278-a79c3680-dbce-11ea-9063-cad5857b47fa.png">
+<img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89931942-850c1c80-dbd2-11ea-9ec2-a30131aada1e.png">
 
 <img width="1425" alt="e-Commerce Art Shop" src="https://user-images.githubusercontent.com/62611599/89929290-aa972700-dbce-11ea-8ba5-fb149d443a50.png">
 
