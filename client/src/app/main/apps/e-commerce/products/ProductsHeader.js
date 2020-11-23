@@ -1,5 +1,4 @@
 import FuseAnimate from '@fuse/core/FuseAnimate';
-// import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
@@ -7,9 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import * as Actions from '../store/actions';
-// import _ from '@lodash';
 
 function ProductsHeader(props) {
 	const dispatch = useDispatch();
@@ -28,7 +25,6 @@ function ProductsHeader(props) {
 					</Typography>
 				</FuseAnimate>
 			</div>
-
 			<div className="flex flex-1 items-center justify-center px-12">
 				<ThemeProvider theme={mainTheme}>
 					<FuseAnimate animation="transition.slideDownIn" delay={300}>
@@ -50,18 +46,6 @@ function ProductsHeader(props) {
 					</FuseAnimate>
 				</ThemeProvider>
 			</div>
-			{/* <FuseAnimate animation="transition.slideRightIn" delay={300}>
-				<Button
-					component={Link}
-					to="/apps/e-commerce/products/new"
-					className="whitespace-no-wrap normal-case"
-					variant="contained"
-					color="secondary"
-				>
-					<span className="hidden sm:flex">Add New Product</span>
-					<span className="flex sm:hidden">New</span>
-				</Button>
-			</FuseAnimate> */}
 		</div>
 	);
 }

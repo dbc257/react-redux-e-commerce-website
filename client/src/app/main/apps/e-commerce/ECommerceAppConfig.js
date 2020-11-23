@@ -17,10 +17,6 @@ const ECommerceAppConfig = {
 			auth: authRoles.user, // ['user']
 			component: React.lazy(() => import('./cart/Cart'))
 		},
-		// {
-		// 	path: '/apps/e-commerce/products/new',
-		// 	component: React.lazy(() => import('./product/Product'))
-		// },
 		{
 			path: '/apps/e-commerce/products/:productId/:productHandle?',
 			component: React.lazy(() => import('./product/Product'))

@@ -1,33 +1,25 @@
 import FusePageSimple from '@fuse/core/FusePageSimple';
-// import FusePageCarded from '@fuse/core/FusePageCarded';
 import withReducer from 'app/store/withReducer';
 import React from 'react';
 import reducer from '../store/reducers';
 import CheckoutHeader from './CheckoutHeader';
-// import CheckoutTable from './CheckoutTable';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import OrdersStatus from '../order/OrdersStatus';
 import * as Actions from '../store/actions';
 import { useDeepCompareEffect } from '@fuse/hooks';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
-// import CheckoutTableHead from './CheckoutTableHead';
-// import { Link, useParams } from 'react-router-dom';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-// import clsx from 'clsx';
 
 function Checkout(props) {
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
 	const routeParams = useParams();
-	// const [tabValue, setTabValue] = useState(0);
-	// const [map, setMap] = useState('shipping');
 
 	useDeepCompareEffect(() => {
 		dispatch(Actions.getOrder(routeParams));
@@ -79,7 +71,6 @@ function Checkout(props) {
 											))}
 										</TableBody>
 									</Table>
-
 									<Table className="simple mt-32">
 										<TableBody>
 											<TableRow>

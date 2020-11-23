@@ -1,7 +1,6 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import FuseUtils from '@fuse/utils';
 import _ from '@lodash';
-// import Checkbox from '@material-ui/core/Checkbox';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,8 +17,6 @@ function OrdersTable(props) {
 	const dispatch = useDispatch();
 	const orders = useSelector(({ eCommerceApp }) => eCommerceApp.orders.data);
 	const searchText = useSelector(({ eCommerceApp }) => eCommerceApp.orders.searchText);
-
-	// const [selected, setSelected] = useState([]);
 	const [data, setData] = useState(orders);
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -54,36 +51,9 @@ function OrdersTable(props) {
 			id
 		});
 	}
-
-	// function handleSelectAllClick(event) {
-	// 	if (event.target.checked) {
-	// 		setSelected(data.map(n => n.id));
-	// 		return;
-	// 	}
-	// 	setSelected([]);
-	// }
-
 	function handleClick(item) {
 		props.history.push(`/apps/e-commerce/orders/${item.id}`);
 	}
-
-	// function handleCheck(event, id) {
-	// 	const selectedIndex = selected.indexOf(id);
-	// 	let newSelected = [];
-
-	// 	if (selectedIndex === -1) {
-	// 		newSelected = newSelected.concat(selected, id);
-	// 	} else if (selectedIndex === 0) {
-	// 		newSelected = newSelected.concat(selected.slice(1));
-	// 	} else if (selectedIndex === selected.length - 1) {
-	// 		newSelected = newSelected.concat(selected.slice(0, -1));
-	// 	} else if (selectedIndex > 0) {
-	// 		newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
-	// 	}
-
-	// 	setSelected(newSelected);
-	// }
-
 	function handleChangePage(event, value) {
 		setPage(value);
 	}
@@ -97,9 +67,7 @@ function OrdersTable(props) {
 			<FuseScrollbars className="flex-grow overflow-x-auto">
 				<Table className="min-w-xl" aria-labelledby="tableTitle">
 					<OrdersTableHead
-						// numSelected={selected.length}
 						order={order}
-						// onSelectAllClick={handleSelectAllClick}
 						onRequestSort={handleRequestSort}
 						rowCount={data.length}
 					/>
@@ -132,26 +100,15 @@ function OrdersTable(props) {
 						)
 							.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 							.map(n => {
-								// const isSelected = selected.indexOf(n.id) !== -1;
 								return (
 									<TableRow
 										className="h-64 cursor-pointer"
 										hover
 										role="checkbox"
-										// aria-checked={isSelected}
 										tabIndex={-1}
 										key={n.id}
-										// selected={isSelected}
 										onClick={event => handleClick(n)}
 									>
-										{/* <TableCell className="w-64 text-center" padding="none">
-											<Checkbox
-												checked={isSelected}
-												onClick={event => event.stopPropagation()}
-												onChange={event => handleCheck(event, n.id)}
-											/>
-										</TableCell> */}
-
 										<TableCell component="th" scope="row">
 											{n.id}
 										</TableCell>

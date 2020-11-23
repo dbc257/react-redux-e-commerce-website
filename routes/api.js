@@ -3207,27 +3207,6 @@ router.get(
   }
 );
 
-// router.post("/api/e-commerce-app/new-product/save", (req, res) => {
-//   const data = JSON.parse(req.data);
-//   console.log(req.data);
-//   let product = null;
-
-//   eCommerceDB.products = eCommerceDB.products.map((product) => {
-//     if (product.id === data.id) {
-//       product = data;
-//       return product;
-//     }
-//     res.json(product);
-//   });
-
-//   if (!product) {
-//     product = data;
-//     eCommerceDB.products = [...eCommerceDB.products, product];
-//   }
-
-//   res.json(product);
-// });
-
 router.get("/api/e-commerce-app/orders", (req, res) => {
   res.json(eCommerceDB.orders);
 });
@@ -3237,4 +3216,5 @@ router.get("/api/e-commerce-app/order/:orderId", (req, res) => {
   const response = eCommerceDB.orders.find((o) => o.id === orderId);
   res.json(response);
 });
+
 module.exports = router;

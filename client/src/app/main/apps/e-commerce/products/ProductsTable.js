@@ -16,7 +16,6 @@ function ProductsTable(props) {
 	const dispatch = useDispatch();
 	const products = useSelector(({ eCommerceApp }) => eCommerceApp.products.data);
 	const searchText = useSelector(({ eCommerceApp }) => eCommerceApp.products.searchText);
-
 	const [data, setData] = useState(products);
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -24,11 +23,9 @@ function ProductsTable(props) {
 		direction: 'asc',
 		id: null
 	});
-
 	useEffect(() => {
 		dispatch(Actions.getProducts());
 	}, [dispatch]);
-
 	useEffect(() => {
 		if (searchText.length !== 0) {
 			setData(_.filter(products, item => item.name.toLowerCase().includes(searchText.toLowerCase())));
@@ -37,7 +34,6 @@ function ProductsTable(props) {
 			setData(products);
 		}
 	}, [products, searchText]);
-
 	function handleRequestSort(event, property) {
 		const id = property;
 		let direction = 'desc';
@@ -51,25 +47,20 @@ function ProductsTable(props) {
 			id
 		});
 	}
-
 	function handleClick(item) {
 		props.history.push(`/apps/e-commerce/products/${item.id}/${item.handle}`);
 	}
-
 	function handleChangePage(event, value) {
 		setPage(value);
 	}
-
 	function handleChangeRowsPerPage(event) {
 		setRowsPerPage(event.target.value);
 	}
-
 	return (
 		<div className="w-full flex flex-col">
 			<FuseScrollbars className="flex-grow overflow-x-auto">
 				<Table className="min-w-xl" aria-labelledby="tableTitle">
 					<ProductsTableHead order={order} onRequestSort={handleRequestSort} rowCount={data.length} />
-
 					<TableBody>
 						{_.orderBy(
 							data,
@@ -96,18 +87,6 @@ function ProductsTable(props) {
 										key={n.id}
 										onClick={event => handleClick(n)}
 									>
-										{/* <TableCell className="w-52" component="th" scope="row" padding="none">
-											{n.image ? (
-												<img className="w-full block rounded" src={n.image} alt={n.name} />
-											) : (
-												<img
-													className="w-full block rounded"
-													src="assets/images/ecommerce/product-image-placeholder.png"
-													alt={n.name}
-												/>
-											)}
-										</TableCell> */}
-
 										<TableCell className="w-52" component="th" scope="row" padding="none">
 											{n.images.length > 0 && n.featuredImageId ? (
 												<img
@@ -123,24 +102,16 @@ function ProductsTable(props) {
 												/>
 											)}
 										</TableCell>
-
 										<TableCell component="th" scope="row">
 											{n.name}
 										</TableCell>
-
-										{/* <TableCell className="truncate" component="th" scope="row">
-											{n.categories}
-										</TableCell> */}
-
 										<TableCell className="truncate" component="th" scope="row">
 											{n.categories.join(', ')}
 										</TableCell>
-
 										<TableCell component="th" scope="row" align="right">
 											<span>$</span>
 											{n.priceTaxIncl}
 										</TableCell>
-
 										<TableCell component="th" scope="row" align="right">
 											{n.quantity}
 											<i
@@ -158,7 +129,6 @@ function ProductsTable(props) {
 					</TableBody>
 				</Table>
 			</FuseScrollbars>
-
 			<TablePagination
 				className="overflow-hidden"
 				component="div"

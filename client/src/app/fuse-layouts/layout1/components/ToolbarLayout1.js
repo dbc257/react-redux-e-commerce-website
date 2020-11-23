@@ -1,16 +1,12 @@
-// import FuseSearch from '@fuse/core/FuseSearch';
 import FuseShortcuts from '@fuse/core/FuseShortcuts';
 import AppBar from '@material-ui/core/AppBar';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-// import ChatPanelToggleButton from 'app/fuse-layouts/shared-components/chatPanel/ChatPanelToggleButton';
 import NavbarMobileToggleButton from 'app/fuse-layouts/shared-components/NavbarMobileToggleButton';
-// import QuickPanelToggleButton from 'app/fuse-layouts/shared-components/quickPanel/QuickPanelToggleButton';
 import UserMenu from 'app/fuse-layouts/shared-components/UserMenu';
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import LanguageSwitcher from '../../shared-components/LanguageSwitcher';
 
 const useStyles = makeStyles(theme => ({
 	separator: {
@@ -23,7 +19,6 @@ const useStyles = makeStyles(theme => ({
 function ToolbarLayout1(props) {
 	const config = useSelector(({ fuse }) => fuse.settings.current.layout.config);
 	const toolbarTheme = useSelector(({ fuse }) => fuse.settings.toolbarTheme);
-
 	const classes = useStyles(props);
 
 	return (
@@ -41,29 +36,15 @@ function ToolbarLayout1(props) {
 							<div className={classes.separator} />
 						</Hidden>
 					)}
-
 					<div className="flex flex-1">
 						<Hidden mdDown>
 							<FuseShortcuts className="px-16" />
 						</Hidden>
 					</div>
-
 					<div className="flex">
 						<div className={classes.separator} />
-
 						<UserMenu />
-
-						{/* <FuseSearch /> */}
-
-						{/* <div className={classes.separator} /> */}
-
-						{/* <LanguageSwitcher /> */}
-
-						{/* <div className={classes.separator} /> */}
-
-						{/* <QuickPanelToggleButton /> */}
 					</div>
-
 					{config.navbar.display && config.navbar.position === 'right' && (
 						<Hidden lgUp>
 							<NavbarMobileToggleButton />

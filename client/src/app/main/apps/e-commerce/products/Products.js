@@ -1,4 +1,3 @@
-// import FusePageCarded from '@fuse/core/FusePageCarded';
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import withReducer from 'app/store/withReducer';
 import React from 'react';

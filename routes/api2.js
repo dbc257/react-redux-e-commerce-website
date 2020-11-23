@@ -2186,7 +2186,6 @@ router.post("/api/e-commerce-app/new-product/save", (req, res) => {
 });
 
 router.get("/e-commerce-app/orders", (req, res) => {
-  // console.log(eCommerceDB.orders)
   res.json(eCommerceDB.orders);
 });
 

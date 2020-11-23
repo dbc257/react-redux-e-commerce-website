@@ -8,11 +8,9 @@ import Icon from '@material-ui/core/Icon';
 import { useTheme } from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-// import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import withReducer from 'app/store/withReducer';
-// import GoogleMap from 'google-map-react';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -22,22 +20,12 @@ import reducer from '../store/reducers';
 import OrderInvoice from './OrderInvoice';
 import OrdersStatus from './OrdersStatus';
 
-// function Marker(props) {
-// 	return (
-// 		<Tooltip title={props.text} placement="top">
-// 			<Icon className="text-red">place</Icon>
-// 		</Tooltip>
-// 	);
-// }
-
 function Order(props) {
 	const dispatch = useDispatch();
 	const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);
 	const theme = useTheme();
-
 	const routeParams = useParams();
 	const [tabValue, setTabValue] = useState(0);
-	// const [map, setMap] = useState('shipping');
 
 	useDeepCompareEffect(() => {
 		dispatch(Actions.getOrder(routeParams));
@@ -71,7 +59,6 @@ function Order(props) {
 									<span className="mx-4">Orders</span>
 								</Typography>
 							</FuseAnimate>
-
 							<div className="flex flex-col min-w-0 items-center sm:items-start">
 								<FuseAnimate animation="transition.slideLeftIn" delay={300}>
 									<Typography className="text-16 sm:text-20 truncate">
@@ -107,7 +94,6 @@ function Order(props) {
 			content={
 				order && (
 					<div className="p-16 sm:p-24 max-w-2xl w-full">
-						{/* Order Details */}
 						{tabValue === 0 && (
 							<div>
 								<div className="pb-48">
@@ -156,11 +142,8 @@ function Order(props) {
 												</tbody>
 											</table>
 										</div>
-
 										<ExpansionPanel
 											elevation={1}
-											// expanded={map === 'shipping'}
-											// onChange={() => setMap(map !== 'shipping' ? 'shipping' : false)}
 										>
 											<ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 												<Typography className="font-600">Shipping Address</Typography>
@@ -169,32 +152,7 @@ function Order(props) {
 												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.shippingAddress.address}
 												</Typography>
-												{/* <div className="w-full h-320">
-													<GoogleMap
-														bootstrapURLKeys={{
-															key: process.env.REACT_APP_MAP_KEY
-														}}
-														defaultZoom={15}
-														defaultCenter={[
-															order.customer.shippingAddress.lat,
-															order.customer.shippingAddress.lng
-														]}
-													>
-														<Marker
-															text={order.customer.shippingAddress.address}
-															lat={order.customer.shippingAddress.lat}
-															lng={order.customer.shippingAddress.lng}
-														/>
-													</GoogleMap>
-												</div> */}
 											</ExpansionPanelDetails>
-											{/* </ExpansionPanel>
-
-										<ExpansionPanel
-											elevation={1}
-											expanded={map === 'invoice'}
-											onChange={() => setMap(map !== 'invoice' ? 'invoice' : false)}
-										> */}
 											<ExpansionPanelSummary>
 												<Typography className="font-600">Invoice Address</Typography>
 											</ExpansionPanelSummary>
@@ -202,29 +160,10 @@ function Order(props) {
 												<Typography className="w-full md:max-w-256 mb-16 md:mb-0">
 													{order.customer.invoiceAddress.address}
 												</Typography>
-												{/* <div className="w-full h-320">
-													<GoogleMap
-														bootstrapURLKeys={{
-															key: process.env.REACT_APP_MAP_KEY
-														}}
-														defaultZoom={15}
-														defaultCenter={[
-															order.customer.invoiceAddress.lat,
-															order.customer.invoiceAddress.lng
-														]}
-													>
-														<Marker
-															text={order.customer.invoiceAddress.address}
-															lat={order.customer.invoiceAddress.lat}
-															lng={order.customer.invoiceAddress.lng}
-														/>
-													</GoogleMap>
-												</div> */}
 											</ExpansionPanelDetails>
 										</ExpansionPanel>
 									</div>
 								</div>
-
 								<div className="pb-48">
 									<div className="pb-16 flex items-center">
 										<Icon color="action">access_time</Icon>
@@ -232,7 +171,6 @@ function Order(props) {
 											Order Status
 										</Typography>
 									</div>
-
 									<div className="table-responsive">
 										<table className="simple">
 											<thead>
@@ -254,7 +192,6 @@ function Order(props) {
 										</table>
 									</div>
 								</div>
-
 								<div className="pb-48">
 									<div className="pb-16 flex items-center">
 										<Icon color="action">attach_money</Icon>
@@ -262,7 +199,6 @@ function Order(props) {
 											Payment
 										</Typography>
 									</div>
-
 									<div className="table-responsive">
 										<table className="simple">
 											<thead>
@@ -292,7 +228,6 @@ function Order(props) {
 										</table>
 									</div>
 								</div>
-
 								<div className="pb-48">
 									<div className="pb-16 flex items-center">
 										<Icon color="action">local_shipping</Icon>
@@ -300,7 +235,6 @@ function Order(props) {
 											Shipping
 										</Typography>
 									</div>
-
 									<div className="table-responsive">
 										<table className="simple">
 											<thead>
@@ -338,7 +272,6 @@ function Order(props) {
 								</div>
 							</div>
 						)}
-						{/* Products */}
 						{tabValue === 1 && (
 							<div className="table-responsive">
 								<table className="simple">
@@ -383,7 +316,6 @@ function Order(props) {
 								</table>
 							</div>
 						)}
-						{/* Invoice */}
 						{tabValue === 2 && <OrderInvoice order={order} />}
 					</div>
 				)

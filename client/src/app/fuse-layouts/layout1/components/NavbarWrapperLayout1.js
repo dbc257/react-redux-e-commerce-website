@@ -122,9 +122,7 @@ function NavbarWrapperLayout1(props) {
 	const config = useSelector(({ fuse }) => fuse.settings.current.layout.config);
 	const navbarTheme = useSelector(({ fuse }) => fuse.settings.navbarTheme);
 	const navbar = useSelector(({ fuse }) => fuse.navbar);
-
 	const classes = useStyles();
-
 	const { folded } = config.navbar;
 	const foldedAndClosed = folded && !navbar.foldedOpen;
 	const foldedAndOpened = folded && navbar.foldedOpen;
@@ -149,7 +147,6 @@ function NavbarWrapperLayout1(props) {
 							<NavbarLayout1 className={classes.navbarContent} />
 						</div>
 					</Hidden>
-
 					<Hidden lgUp>
 						<Drawer
 							anchor={config.navbar.position}
@@ -168,7 +165,6 @@ function NavbarWrapperLayout1(props) {
 					</Hidden>
 				</div>
 			</ThemeProvider>
-
 			{config.navbar.display && !config.toolbar.display && (
 				<Hidden lgUp>
 					<NavbarMobileToggleFab />

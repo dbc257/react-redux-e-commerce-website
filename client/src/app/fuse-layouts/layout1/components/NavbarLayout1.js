@@ -27,7 +27,6 @@ const useStyles = makeStyles({
 function NavbarLayout1(props) {
 	const classes = useStyles();
 	const theme = useTheme();
-
 	return (
 		<div className={clsx('flex flex-col overflow-hidden h-full', props.className)}>
 			<AppBar
@@ -39,18 +38,15 @@ function NavbarLayout1(props) {
 				<div className="flex flex-1 mx-8">
 					<Logo />
 				</div>
-
 				<Hidden mdDown>
 					<NavbarFoldedToggleButton className="w-40 h-40 p-0" />
 				</Hidden>
-
 				<Hidden lgUp>
 					<NavbarMobileToggleButton className="w-40 h-40 p-0">
 						<Icon>{theme.direction === 'ltr' ? 'arrow_back' : 'arrow_forward'}"</Icon>
 					</NavbarMobileToggleButton>
 				</Hidden>
 			</AppBar>
-
 			<FuseScrollbars className={clsx(classes.content)} option={{ suppressScrollX: true }}>
 				<UserNavbarHeader />
 
